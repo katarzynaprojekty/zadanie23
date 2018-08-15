@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import NotesContainer from '../Note/NotesContainer';
+import Lane from './LaneContainer.js';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
