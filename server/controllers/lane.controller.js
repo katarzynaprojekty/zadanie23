@@ -25,6 +25,7 @@ export function addLane(req, res) {
 //get lane
 export function getLanes(req, res) {
   Lane.find().exec((err, lanes) => {
+    console.log(err);
     if (err) {
       res.status(500).send(err);
     }
