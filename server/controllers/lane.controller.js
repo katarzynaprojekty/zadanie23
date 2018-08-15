@@ -4,7 +4,7 @@ import uuid from 'uuid';
 export function getSomething(req, res) {
   return res.status(200).end();
 }
-//Add Lane
+
 export function addLane(req, res) {
   if (!req.body.name) {
     res.status(403).end();
@@ -22,17 +22,16 @@ export function addLane(req, res) {
     res.json(saved);
   });
 }
-//get lane
+
 export function getLanes(req, res) {
   Lane.find().exec((err, lanes) => {
-    console.log(err);
     if (err) {
       res.status(500).send(err);
     }
     res.json({ lanes });
   });
 }
-//delete lane
+
 export function deleteLane(req, res) {
   Lane.findOne({ id: req.params.laneId }).exec((err, lane) => {
     if (err) {
