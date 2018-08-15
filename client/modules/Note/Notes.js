@@ -1,9 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Note from './Note';
 import Edit from '../../components/Edit.js';
 
 // Import Style
-import styles from './Notes.css';
+// import styles from './Notes.css';
 
 const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
   return (<ul className="notes">{notes.map((note) =>

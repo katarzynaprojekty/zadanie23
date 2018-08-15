@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NotesContainer from '../Note/NotesContainer';
-import Lane from './LaneContainer.js';
+// import Lane from './LaneContainer.js';
 import Edit from '../../components/Edit.js';
 
 // Import Style
