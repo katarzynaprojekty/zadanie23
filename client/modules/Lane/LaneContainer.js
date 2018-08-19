@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = {
   ...laneActions,
   addNote: createNote,
+  createLane: createLaneRequest,
 };
 
 export default connect(

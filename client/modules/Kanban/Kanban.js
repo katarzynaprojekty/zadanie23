@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Lanes from '../Lane/Lanes';
-import { createLane, fetchLanes } from '../Lane/LaneActions';
+import { createLaneRequest, createLane, fetchLanes } from '../Lane/LaneActions';
 
 // Import Style
 import styles from '../Lane/Lane.css';
@@ -31,7 +31,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  createLane,
+  createLane: createLaneRequest,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Kanban);
