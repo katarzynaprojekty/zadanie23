@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Note from './Note';
 import Edit from '../../components/Edit.js';
+import * as noteActions from '../Note/NoteActions';
 
 // Import Style
 // import styles from './Notes.css';
@@ -38,4 +39,11 @@ Notes.propTypes = {
   laneId: PropTypes.string,
 };
 
-export default Notes;
+const mapDispatchToProps = {
+  ...noteActions,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Notes);
