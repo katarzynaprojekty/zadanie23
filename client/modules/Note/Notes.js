@@ -7,19 +7,19 @@ import * as noteActions from '../Note/NoteActions';
 // Import Style
 // import styles from './Notes.css';
 
-const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
-  return (<ul className="notes">{notes.map((note) =>
+const Notes = ({ notes, laneId, editNote, updateNote, deleteNote, moveWithinLane}) => (
+  <ul className={styles.Notes}>{notes.map((note) =>
     <Note
       id={note.id}
       key={note.id}
-      editing={note.editing}
+      moveWithinLane={moveWithinLane}
       laneId={laneId}
     >
       <Edit
         editing={note.editing}
         value={note.task}
         onValueClick={() => editNote(note.id)}
-        onUpdate={(task) => updateNote({
+        onUpdate={task => updateNote({
           ...note,
           task,
           editing: false,
@@ -27,8 +27,8 @@ const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
         onDelete={() => deleteNote(note.id, laneId)}
       />
     </Note>
-  )}</ul>);
-};
+  )}</ul>
+  );
 
 Notes.propTypes = {
   deleteNoteRequest: PropTypes.func,
