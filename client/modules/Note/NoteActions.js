@@ -1,4 +1,5 @@
 import callApi from '../../util/apiCaller';
+import uuid from 'uuid';
 // Export Constants
 export const CREATE_NOTE = 'CREATE_NOTE';
 export const CREATE_NOTES = 'CREATE_NOTES';
@@ -11,7 +12,10 @@ export function createNote(note, laneId) {
   return {
     type: CREATE_NOTE,
     laneId,
-    note,
+    note: {
+      id: uuid(),
+      ...note,
+    },
   };
 }
 
