@@ -15,6 +15,7 @@ const mapDispatchToProps = {
   updateLane: updateLaneRequest,
   addNote: createNoteRequest,
   createLane: createLaneRequest,
+  moveBetweenLanesWithNotes,
   editLane,
 };
 
