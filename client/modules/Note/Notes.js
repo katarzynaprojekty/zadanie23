@@ -12,6 +12,7 @@ const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
       id={note.id}
       key={note.id}
       editing={note.editing}
+      laneId={laneId}
     >
       <Edit
         editing={note.editing}
@@ -29,11 +30,12 @@ const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
 };
 
 Notes.propTypes = {
+  deleteNoteRequest: PropTypes.func,
   deleteNote: PropTypes.func,
   updateNote: PropTypes.func,
-  laneId: PropTypes.string,
   editNote: PropTypes.func,
   notes: PropTypes.array,
+  laneId: PropTypes.string,
 };
 
 export default Notes;
