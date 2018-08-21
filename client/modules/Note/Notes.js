@@ -37,13 +37,11 @@ Notes.propTypes = {
   editNote: PropTypes.func,
   notes: PropTypes.array,
   laneId: PropTypes.string,
+  moveWithinLane: PropTypes.func,
 };
 
 const mapDispatchToProps = {
   ...noteActions,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Notes);
+export default Notes;;

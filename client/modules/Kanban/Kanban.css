@@ -2,4 +2,12 @@
 .AddLane {
   color: black;
 }
+
+.Container {
+	display: flex;
+}
+
+.LaneContainer {
+	display: flex;
+}
   

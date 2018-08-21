@@ -8,7 +8,7 @@ import Edit from '../../components/Edit.js';
 import styles from './Lane.css';
 
 const Lane = (props) => {
-  const { lane, laneNotes, updateLane, addNote, deleteLane, editLane } = props;
+  const { connectDropTarget, lane, laneNotes, updateLane, addNote, deleteLane, editLane } = props;
   const laneId = lane.id;
 
   return connectDropTarget (

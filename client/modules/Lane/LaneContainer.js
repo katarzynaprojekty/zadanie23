@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Lane from './Lane';
-import { createLaneRequest, deleteLaneRequest, updateLaneRequest, editLane } from './LaneActions';
+import { createLaneRequest, deleteLaneRequest, updateLaneRequest, editLane, moveBetweenLanes } from './LaneActions';
 import { createNoteRequest } from '../Note/NoteActions';
 import { compose } from 'redux';
 import { DropTarget } from 'react-dnd';
@@ -15,7 +15,7 @@ const mapDispatchToProps = {
   updateLane: updateLaneRequest,
   addNote: createNoteRequest,
   createLane: createLaneRequest,
-  moveBetweenLanesWithNotes,
+  moveBetweenLanes,
   editLane,
 };
 

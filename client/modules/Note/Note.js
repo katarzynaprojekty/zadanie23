@@ -8,6 +8,10 @@ import ItemTypes from '../Kanban/itemTypes';
 import styles from './Note.css';
 
 class Note extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
   render() {
     const {
       connectDragSource,
